@@ -22,3 +22,8 @@ export LSCOLORS=DxFxBxDxCxegedabagacad
 alias gbl='git branch --all'
 alias gs='git status'
 alias ll='ls -aohF'
+
+# references 
+# https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Controlling-the-Prompt
+# https://ss64.com/bash/syntax-prompt.html
+# https://bashrcgenerator.com/
