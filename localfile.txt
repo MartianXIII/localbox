@@ -1,0 +1,24 @@
+# Git Functions
+
+# git_branch() {
+#  git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+# }
+
+# GIT FUNCTIONS
+git_branch() {
+    git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# TERMINAL PROMPT
+PS1="\[\e[1;91m\]\H\[\e[m\]" #Hostname(Box)
+PS1+=" " #Space
+PS1+="\[\e[0;96m\]\W\[\e[m\]" #Current Directory
+PS1+="\[\e[0;92m\]\$(git_branch)\[\e[m\]" #Current Branch
+PS1+=" => " #End prompt
+export PS1;
+export CLICOLOR=1
+export LSCOLORS=DxFxBxDxCxegedabagacad
+
+alias gbl='git branch --all'
+alias gs='git status'
+alias ll='ls -aohF'
